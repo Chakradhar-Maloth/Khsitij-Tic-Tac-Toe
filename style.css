@@ -1,0 +1,165 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Bhaina+2&family=Roboto&display=swap');
+
+
+body {
+    font-family: "poppins", sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    background-color: #ffffc7;
+}
+
+.container {
+    width: 90%;
+    max-width: 600px;
+    text-align: center;
+    background-color: #82b9ba;
+    /* Set constant background color for the container */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#home-page,
+#game-page {
+    display: none;
+}
+
+#home-page {
+    display: block;
+}
+
+h1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px 0;
+    color: #b0413e;
+}
+
+h1 img {
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+}
+
+.select-mode {
+    margin: 20px 0;
+}
+
+.select-mode label {
+    display: block;
+    margin-bottom: 5px;
+    color: #b0413e;
+}
+
+.select-mode input[type="text"] {
+    width: 100%;
+    padding: 5px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+}
+
+.game-board {
+    display: grid;
+    gap: 5px;
+    justify-content: center;
+    background-color: #ffffc7;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+.game-board div {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #000;
+    font-size: 24px;
+    cursor: pointer;
+    background-color: #ffffc7;
+    color: #b0413e;
+}
+
+.scores,
+.controls {
+    margin-top: 20px;
+}
+
+.scores div {
+    margin: 5px 0;
+}
+
+.controls button {
+    padding: 10px;
+    margin: 5px;
+}
+
+.winner-message {
+    display: none;
+    font-size: 24px;
+    color: green;
+    animation: winner 1s ease-in-out infinite;
+}
+
+@keyframes winner {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.5);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+.winner-message {
+    color: #b0413e;
+}
+
+@media (max-width: 600px) {
+    .game-board div {
+        width: 30px;
+        height: 30px;
+        font-size: 18px;
+    }
+}
+
+#resetbutton{
+  color: #fff;
+  background-color: #191913;
+  cursor: pointer;
+  border-radius: 2vmin;
+  font-family: "poppins";
+}
+#resetgame{
+  color: #fff;
+  background-color: #191913;
+  cursor: pointer;
+  border-radius: 2vmin;
+  font-family: "poppins";
+}
+#startgame{
+  color: #fff;
+  background-color: #191913;
+  cursor: pointer;
+  border-radius: 2vmin;
+  font-size: 4vmin;
+  font-family: "poppins";
+}
+#home{
+  color: #fff;
+  background-color: #191913;
+  cursor: pointer;
+  font-size: 4vmin;
+  border-radius: 2vmin;
+  font-family: "poppins";
+  /* padding-top: 12vmin; */
+}

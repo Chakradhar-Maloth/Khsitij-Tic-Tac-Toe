@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic Tac Toe</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1 style="font-family: Arial, Helvetica, sans-serif;">
+            <img src="tic-tac-toe-svgrepo-com (1).svg" alt="Tic Tac Toe" style="height: 9vmin;">
+            TIC TAC TOE
+        </h1>
+
+        <div id="home-page" style="font-family: roboto;">
+            <div class="select-mode" id="toselect">
+                <label>Select Mode:</label>
+                <select id="mode" style="font-size: 2.76vmin;">
+                    <option value="solo">Solo (Computer)</option>
+                    <option value="friends">Friends (Two Players)</option>
+                </select>
+            </div>
+            <div class="select-mode">
+                <label>Player 1 Name:</label>
+                <input type="text" id="player1-name" placeholder="Player 1">
+            </div>
+            <div class="select-mode" id="player2-container" style="display: none;">
+                <label>Player 2 Name:</label>
+                <input type="text" id="player2-name" placeholder="Player 2">
+            </div>
+            <div class="select-mode">
+                <label>Board Size (3-12):</label>
+                <input type="range" id="board-size" min="3" max="12" value="3" oninput="this.nextElementSibling.value = this.value">
+                <output>3</output>
+            </div>
+            <button id="startgame" onclick="startGame()">Start Game</button>
+        </div>
+
+        <div id="game-page">
+            <div class="scores">
+                <div id="turn-info">Turn for Player 1</div>
+                <div id="score-player1">Player 1: 0</div>
+                <div id="score-player2">Player 2: 0</div>
+            </div>
+            <div id="game-board" class="game-board" ></div>
+            <div class="controls">
+                <button id="resetbutton" onclick="resetScores()">Reset Scores</button>
+                <button id="resetgame" onclick="resetGame()">Reset Game</button>
+            </div>
+            <button id="home" onclick="goHome()">Home</button>
+            <div class="winner-message" id="winner-message"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
